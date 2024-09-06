@@ -41,9 +41,14 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 @import 'main';
 @import 'box1';
 @import 'box2';
 @import 'box3';
+@import 'box6';
+@import 'box7';

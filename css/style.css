@@ -40,6 +40,9 @@
   display: flex;
   flex-flow: column nowrap;
   gap: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .row {
@@ -293,6 +296,32 @@
   background: none;
   background-color: none;
   outline: none;
+}
+
+.box6 {
+  background: url("../images/fondo.png") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FAFAFA;
+  font-size: 100px;
+}
+
+.box7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  padding: 30px 0px;
+}
+.box7 .button {
+  width: 85%;
+  margin: auto;
+  border: 2px solid red;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px 0px;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
