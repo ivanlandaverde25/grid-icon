@@ -1,0 +1,85 @@
+// Caja 1
+.box1{
+    grid-area: box1;
+
+    .movil{
+        width: 85%;
+        margin: auto;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        
+        .container-loader{
+            background-color: var(--fourthy);
+            color: #FAFAFA;
+            font-size: 18px;
+            padding: 15px 0px;
+            @include centerItem();
+
+
+            .loader {
+                border: 24px solid #FFF;
+                border-color: #FF3D00 #FF3D00 #fff #fff;
+                border-radius: 50%;
+                position: relative;
+                margin-bottom: 10px;
+                animation: rotate 1s linear infinite;
+            }
+      
+            .loader:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translate(-50% , -125%);
+                left: 50%;
+                width: 12px;
+                height: 12px;
+                background: #333;
+                border-radius: 50%;
+            }
+                
+            .loader::after{
+                content: '';
+                min-width: 5px;
+                min-height: 5px;
+                display: block;
+                border-radius: 50%;
+                background: white;
+                position: absolute;
+                transform: translate(-60% , -240%);
+
+            }
+            @keyframes rotate {
+            100%   { transform: rotate(360deg)}
+            }
+        }
+
+        // Acciones
+        .acciones{
+            width: 100%;
+            // border: 2px solid red;
+            background-color: var(--third);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            @include centerItem('space-between', 'row nowrap');
+            padding: 12px;
+            overflow: hidden;
+        }
+
+        .accion{
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-size: 25px;
+        }
+    }
+
+}
+
+.active{
+    background-color: var(--fourthy);
+    color: #FAFAFA;
+}
+
+.inactive{
+    background-color: #FAFAFA;
+    color: var(--fourthy);
+}

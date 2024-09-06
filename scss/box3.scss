@@ -1,0 +1,37 @@
+.box3{
+    grid-area: box3;
+    @include centerItem('center','row nowrap','flex-end');
+    overflow: hidden;
+    
+    .list{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 85%;
+        margin: 0 auto;
+        overflow: hidden;
+
+        &-header{
+            background-color: var(--third);
+            color: var(--secondary);
+            text-align: center;
+            padding: 15px 0px;
+        }
+
+        &-content{
+            border: 2px solid red;
+        }
+
+        .item{
+            border: 2px solid blue;
+            
+
+
+            .checkbox{
+                color: var(--fourthy);
+                background: none;
+                background-color: none;
+                outline: none;
+            }
+        }
+    }
+}

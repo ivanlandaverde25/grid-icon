@@ -1,0 +1,94 @@
+@mixin grilla($box1, $box2, $box3: 0){
+    position: relative;
+    display: grid;
+    @if $box3 == 0{
+        grid-template: 
+        "#{$box1} #{$box2}" 245px/
+        calc(50% - 10px) calc(50% - 10px);
+    } @else {
+        grid-template: 
+        "#{$box1} #{$box2} #{$box3}" 245px/
+        calc(33.3% - 12.6px) calc(33.3% - 12.6px) calc(33.3% - 12.6px);
+    }
+};
+
+@mixin centerItem($justify: 'center', $direction:'column nowrap', $align: 'center'){
+    display: flex;
+    justify-content: #{$justify};
+    align-items: #{$align};
+    flex-flow: #{$direction};
+};
+
+.row{
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.box{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.box-primary{
+    background-color: var(--secondary);
+}
+
+.box-secondary{
+    background-color: var(--fourthy);
+}
+
+.box-tertiary{
+    background-color: var(--third);
+}
+
+// Fila 1
+.row1{
+    @include grilla('box1', 'box2', 'box3');
+}
+
+// Fila 2
+.row2{
+    @include grilla('box4', 'box5');
+}
+
+.box4{
+    grid-area: box4;
+}
+
+.box5{
+    grid-area: box5;
+}
+
+// Fila 3
+.row3{
+    @include grilla('box6', 'box7', 'box8');
+}
+
+.box6{
+    grid-area: box6;
+}
+
+.box7{
+    grid-area: box7;
+}
+
+.box8{
+    grid-area: box8;
+}
+
+// Fila 4
+.row4{
+    @include grilla('box9', 'box10');
+}
+
+.box9{
+    grid-area: box9;
+}
+
+.box10{
+    grid-area: box10;
+}

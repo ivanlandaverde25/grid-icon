@@ -1,0 +1,56 @@
+// Caja 2
+.box2{
+    grid-area: box2;
+    @include centerItem();
+
+    &::after{
+        content: '';
+        display: block;
+        background-color: var(--secondary);
+        position: absolute;
+        left: 15%;
+        top: 0;
+        min-width: 20px;
+        min-height: 60%;
+    }
+    
+    &::before{
+        content: '';
+        display: block;
+        background-color: var(--secondary);
+        position: absolute;
+        left: 79%;
+        top: 0;
+        min-width: 20px;
+        min-height: 60%;
+    }
+
+    &-container{
+        width: 85%;
+        z-index: 2;
+        height: 65%;
+        @include centerItem('space-between');
+    }
+    
+    &-option{
+        background-color: #FAFAFA;
+        border-radius: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 20px;
+        color: var(--fourthy);
+        font-size: 16px;
+        overflow: hidden;
+
+        .arrow{
+            background-color: var(--third);
+            color: #FAFAFA;
+            padding: 22px 15px;
+            font-size: 20px;
+            width: 22%;
+            @include centerItem();
+        }
+    }
+}

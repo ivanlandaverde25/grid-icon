@@ -1,0 +1,49 @@
+:root {
+    // Colores primarios
+    --primary: #60568B;
+    --secondary: #B197FC;
+    --third: #183052;
+    --fourthy: #6841DA;
+    --backgroud: #F0F1F3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--secondary);
+}
+
+.size15{
+    font-size: 15px;
+}
+
+.size20{
+    font-size: 20px;
+}
+
+.size25{
+    font-size: 25px;
+}
+
+.size30{
+    font-size: 30px;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--backgroud);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+
+@import 'main';
+@import 'box1';
+@import 'box2';
+@import 'box3';
