@@ -1,0 +1,119 @@
+@keyframes opacity {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    33% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    66% {
+        transform: scale(0.8);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;    
+    }
+
+}
+
+.box5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .stepper-container{
+        // border: 3px solid red;
+        width: 70%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column  nowrap;
+
+        &-icons{
+            // border: 3px solid green;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        
+        .icon-stepper{
+            font-size: 30px;
+            
+            &-completed{
+                color: var(--secondary);
+            }
+            
+            &-active{
+                color: var(--secondary);
+                animation: opacity 2.5s linear infinite;
+            }
+            
+            &-inactive{
+                color: rgba($color: #FAFAFA, $alpha: 0.5);
+            }
+        }
+        
+        
+        &-bars{
+            // border: 3px solid orange;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 0px;
+            position: relative;
+            overflow: hidden;
+            
+            &::before{
+                content: '';
+                display: block;
+                width: 98%;
+                height: 12px;
+                background-color: var(--backgroud);
+                position: absolute;
+                top: 30%;
+                left: 1%;
+            }
+            
+            &::after{
+                content: '';
+                display: block;
+                width: 35%;
+                height: 6px;
+                background-color: var(--secondary);
+                position: absolute;
+                top: 40%;
+                left: 1%;
+            }
+            
+            .step{
+                min-width: 25px;
+                min-height: 25px;
+                background-color: var(--backgroud);
+                border-radius: 50%;
+                position: relative;
+                z-index: 2;
+
+                &::after{
+                    content: '';
+                    display: block;
+                    min-width: 15px;
+                    min-height: 15px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 23%;
+                    left: 20%;
+                    background-color: var(--secondary);
+                }
+            }
+        }
+    }
+
+
+}

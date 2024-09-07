@@ -1,0 +1,38 @@
+@mixin centerCard($direction: row){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: #{$direction} nowrap;
+    height: 100%;
+};
+
+.box8{
+    @include centerCard('row');
+
+    .post-card{
+        @include centerCard('row');
+        border-radius: 15px;
+        color: #FAFAFA;
+        width: 85%;
+        margin: auto;
+        height: 60%;
+        overflow: hidden;
+        
+        &-icon{
+            @include centerCard('row');
+            width: 25%;
+            background-color: var(--backgroud);
+            color: var(--secondary);
+            font-size: 40px;
+        }
+        
+        &-content{
+            width: 75%;;
+            background-color: var(--secondary);
+            @include centerCard('column');
+            font-size: 20px;
+            padding: 0px 15px;
+            font-weight: 300;
+        }
+    }
+}

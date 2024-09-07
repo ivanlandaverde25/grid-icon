@@ -1,9 +1,28 @@
+@mixin button($borde: #333, $fondo: #FAFAFA, $colorText: #333, $boxShadow: 0){
+    border: 1px solid #{$borde};
+    background-color: #{$fondo};
+    color: #{$colorText};
+    font-weight: 700;
+    @if $boxShadow == 1{
+        box-shadow: 0px 8px 1px var(--third)
+    }
+};
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .box7{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
-    padding: 30px 0px;
+    padding: 20px 0px;
 
     .button{
         width: 85%;
@@ -11,7 +30,34 @@
         border: 2px solid red;
         text-align: center;
         font-size: 20px;
-        padding: 15px 0px;
+        padding: 20px 0px;
         border-radius: 10px;
+        cursor: pointer;
+
+        &1{
+            @include button( var(--third), var(--backgroud) , var(--third), 1 );
+
+            &:hover{
+                background-color: var(--secondary);
+            }
+        }
+
+        &2{
+            @include button( var(--third), var(--fourthy) , var(--backgroud), 0 );
+        }
+
+        &-joint{
+            font-size: 28px;
+            margin-right: 20px;
+
+            &1{
+                color: var(--fourthy);
+            }
+
+            &2{
+                animation: rotate360 2s linear infinite;
+            }
+        }
+
     }
 }

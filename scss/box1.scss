@@ -64,14 +64,15 @@
             padding: 12px;
             overflow: hidden;
         }
-
+        
+        
         .accion{
             padding: 10px 15px;
             border-radius: 15px;
             font-size: 25px;
         }
     }
-
+    
 }
 
 .active{
@@ -82,4 +83,10 @@
 .inactive{
     background-color: #FAFAFA;
     color: var(--fourthy);
+    transition: .6s .1s .1s ease;
+    
+    &:hover{
+        background-color: var(--fourthy);
+        color: #FAFAFA;
+    }
 }
