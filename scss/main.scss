@@ -1,9 +1,9 @@
-@mixin grilla($box1, $box2, $box3: 0){
+@mixin grilla($box1, $box2, $box3: 0, $height: 245px){
     position: relative;
     display: grid;
     @if $box3 == 0{
         grid-template: 
-        "#{$box1} #{$box2}" 245px/
+        "#{$box1} #{$box2}" #{$height}/
         calc(50% - 10px) calc(50% - 10px);
     } @else {
         grid-template: 
@@ -82,7 +82,7 @@
 
 // Fila 4
 .row4{
-    @include grilla('box9', 'box10');
+    @include grilla('box9', 'box10', 0, '400px');
 }
 
 .box9{

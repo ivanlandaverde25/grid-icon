@@ -2,6 +2,8 @@
     grid-area: box3;
     @include centerItem('center','row nowrap','flex-end');
     overflow: hidden;
+    font-weight: 300;
+    font-size: 13px;
     
     .list{
         border-top-left-radius: 15px;
@@ -14,16 +16,34 @@
             background-color: var(--third);
             color: var(--secondary);
             text-align: center;
-            padding: 15px 0px;
+            padding: 10px 0px;
         }
 
         &-content{
-            border: 2px solid red;
+
+            .todo-item-active{
+                color: var(--primary);
+            }
+
+            .todo-item-inactive{
+                color: #696969;
+            }
+
+            .todo-item-icon-container{
+                border-bottom: 0.5px solid var(--placeholder);
+                width: 100%;
+                padding: 15px 0px 15px;
+            }
         }
 
         .item{
-            border: 2px solid blue;
-            
+            // border: 2px solid blue;
+            background-color: var(--backgroud);
+            display: flex;
+            justify-content: flex-start;
+            gap: 0px 15px;
+            padding-left: 15px;
+
 
 
             .checkbox{

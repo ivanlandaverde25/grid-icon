@@ -4,7 +4,9 @@
     --secondary: #74C0FC;
     --third: #183052;
     --fourthy: #146EBE;
+    --fifthy: #051b35;
     --backgroud: #F0F1F3;
+    --placeholder: #C3C6D1;
 }
 
 * {
@@ -31,6 +33,14 @@
     font-size: 30px;
 }
 
+.mr-10{
+    margin-right: 10px;
+}
+
+.mr-5{
+    margin-right: 5px;
+}
+
 .container {
     position: relative;
     width: 80%;
@@ -50,7 +60,10 @@
 @import 'box1';
 @import 'box2';
 @import 'box3';
+@import 'box4';
 @import 'box5';
 @import 'box6';
 @import 'box7';
 @import 'box8';
+@import 'box9';
+@import 'box10';

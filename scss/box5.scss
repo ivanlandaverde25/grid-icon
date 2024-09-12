@@ -8,7 +8,7 @@
         opacity: 1;
     }
     66% {
-        transform: scale(0.8);
+        transform: scale(0.9);
         opacity: 0.4;
     }
     100% {
@@ -24,7 +24,6 @@
     align-items: center;
     
     .stepper-container{
-        // border: 3px solid red;
         width: 70%;
         height: 70%;
         display: flex;
@@ -33,7 +32,6 @@
         flex-flow: column  nowrap;
 
         &-icons{
-            // border: 3px solid green;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -59,9 +57,7 @@
             }
         }
         
-        
         &-bars{
-            // border: 3px solid orange;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -114,6 +110,4 @@
             }
         }
     }
-
-
 }
